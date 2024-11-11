@@ -14,23 +14,36 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+```
+    todo-list-app/
+    ├── .next/                        # Next.js 빌드 출력 폴더 (자동 생성)
+    ├── node_modules/                 # 설치된 npm 패키지들
+    ├── public/                       # 정적 파일 (이미지, 아이콘 등)
+    │   └── favicon.ico
+    ├── app/                          # Next.js App Router 폴더
+    │   ├── layout.tsx                # 기본 레이아웃 파일
+    │   ├── page.tsx                  # 메인 페이지 (로그인 후 접근 가능)
+    │   ├── login/                    # 로그인 페이지
+    │   │   └── page.tsx              # 로그인 페이지 컴포넌트
+    │   ├── signup/                   # 회원가입 페이지
+    │   │   └── page.tsx              # 회원가입 페이지 컴포넌트
+    │   ├── forgot-password/          # 비밀번호 찾기 페이지
+    │   │   └── page.tsx              # 비밀번호 찾기 페이지 컴포넌트
+    │   ├── protected/                # 로그인 후 접근 가능한 페이지들
+    │   │   └── page.tsx              # 메인 페이지 또는 보호된 페이지
+    │   └── components/               # 재사용 가능한 컴포넌트
+    │       ├── Button.tsx            # 버튼 컴포넌트
+    │       ├── Input.tsx             # 입력 필드 컴포넌트
+    │       └── Navbar.tsx            # 네비게이션 바
+    ├── contexts/                     # 컨텍스트 폴더
+    │   └── AuthContext.tsx           # 인증 상태 관리 컨텍스트
+    ├── middleware.ts                 # 페이지 접근을 제어하는 미들웨어
+    ├── styles/                       # 글로벌 스타일 및 Tailwind CSS 설정
+    │   ├── globals.css               # 전역 CSS 파일
+    │   └── tailwind.css              # Tailwind CSS 설정 파일
+    ├── tsconfig.json                 # TypeScript 설정 파일
+    ├── tailwind.config.js            # Tailwind CSS 설정 파일
+    ├── package.json                  # 프로젝트 설정 및 의존성 목록
+    └── next.config.js                # Next.js 설정 파일
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```

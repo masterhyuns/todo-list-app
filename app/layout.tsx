@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { notoSansKR } from './fonts';
-import "./globals.css";
+import { notoSansKR } from "@/styles/fonts";
+import "../styles/globals.css";
+import { AuthProvider } from "@/contexts/AuthContexts";
 
 export const metadata: Metadata = {
   title: "Todo List App",
@@ -19,14 +20,11 @@ export default function RootLayout({
 			antialiased: 이 클래스는 텍스트의 안티앨리어싱 처리를 적용하기 위해 사용하는 TailwindCSS의 유틸리티 클래스입니다.
 			**antialiased**는 텍스트의 경계선이 더 부드럽고 선명하게 보이도록 처리해 줍니다.
 		*/
-  
   }
   return (
     <html lang="en">
-      <body
-        className={`${notoSansKR.variable}  antialiased`}
-      >
-        {children}
+      <body className={`${notoSansKR.variable}  antialiased`}>
+        <AuthProvider>{children}</AuthProvider>
       </body>
     </html>
   );
