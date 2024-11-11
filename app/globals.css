@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Eric Meyer's Reset CSS v2.0 */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+html, body {
+    overscroll-behavior: none; /* 기본 스크롤 바운싱 방지 */
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Noto Sans KR 폰트 적용 */
+/*:root {*/
+/*  --font-noto-sans-kr: "Noto Sans KR", sans-serif;*/
+/*}*/
+
+/* globals.css */
+body {
+    /*font-family: var(--font-noto-sans-kr);*/
+    @apply bg-white text-black;
+}
+
+
+.speech-bubble {
+    position: absolute;
+    background: #0275ff;
+    border-radius: .4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 5px;
+    color: #fff;
+    gap: 10px;
+    top: -35px;
+    left: 20%;
+    font-weight: 600;
+}
+
+.speech-bubble:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top-color: #0275ff;
+    border-bottom: 0;
+    margin-left: -10px;
+    margin-bottom: -10px;
+
+}
